@@ -18,12 +18,12 @@ init() {
     index = 0
 }
 func WomCalc(amount: Int,weight: Int,time: Int)-> Double {
-    index = ((amount * 5.14)/weight *0.66) - 0.015*time
+    index = ((amount * 5.14)/weight * 0.66) - 0.015 * time
     let womBAC = index 
     return womBAC
 }
 func MenCalc(amount: Int, weight:Int, time:Int)-> Double {
-    index = ((amount*5.14)/weight*.73) - 0.015*time
+    index = ((amount * 5.14)/weight * 0.73) - 0.015 * time
     let menBAC = index
     return menBAC
 }
