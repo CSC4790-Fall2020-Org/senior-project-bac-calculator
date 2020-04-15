@@ -20,6 +20,7 @@
 		E0911BDC24476734003EE408 /* wineglass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0911BDB24476734003EE408 /* wineglass.jpg */; };
 		E0911BDE24476737003EE408 /* shot glass.png in Resources */ = {isa = PBXBuildFile; fileRef = E0911BDD24476737003EE408 /* shot glass.png */; };
 		E0911BE224476F77003EE408 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0911BE124476F76003EE408 /* Default-568h@2x.png */; };
+		E0911BEF24479D01003EE408 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0911BEE24479D01003EE408 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		E0911BDB24476734003EE408 /* wineglass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wineglass.jpg; path = ../../wineglass.jpg; sourceTree = "<group>"; };
 		E0911BDD24476737003EE408 /* shot glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shot glass.png"; path = "../../shot glass.png"; sourceTree = "<group>"; };
 		E0911BE124476F76003EE408 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E0911BEE24479D01003EE408 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +97,11 @@
 				E0911B772446A4C0003EE408 /* calcTests */,
 				E0911B822446A4C0003EE408 /* calcUITests */,
 				E0911B5F2446A4BB003EE408 /* Products */,
-				E0911B952446ABD4003EE408 /* 092d62793d26ab536d3d22ee450b010a.jpg */,
 				E0911BD724476596003EE408 /* Screen Shot 2020-04-15 at 11.53.48 AM.png */,
 				E0911BD92447672F003EE408 /* beer can.png */,
 				E0911BDB24476734003EE408 /* wineglass.jpg */,
 				E0911BDD24476737003EE408 /* shot glass.png */,
+				E0911B952446ABD4003EE408 /* 092d62793d26ab536d3d22ee450b010a.jpg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +125,7 @@
 				E0911B912446A767003EE408 /* userInfo.storyboard */,
 				E0911B6F2446A4BF003EE408 /* Info.plist */,
 				E0911B692446A4BF003EE408 /* Preview Content */,
+				E0911BEE24479D01003EE408 /* Images.xcassets */,
 			);
 			path = calc;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				E0911B6A2446A4BF003EE408 /* Preview Assets.xcassets */,
+				E0911BE824479BB7003EE408 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -151,6 +155,13 @@
 				E0911B852446A4C0003EE408 /* Info.plist */,
 			);
 			path = calcUITests;
+			sourceTree = "<group>";
+		};
+		E0911BE824479BB7003EE408 /* Preview Assets.xcassets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Assets.xcassets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0911B962446ABD5003EE408 /* 092d62793d26ab536d3d22ee450b010a.jpg in Resources */,
+				E0911BEF24479D01003EE408 /* Images.xcassets in Resources */,
 				E0911BDE24476737003EE408 /* shot glass.png in Resources */,
 				E0911BE224476F77003EE408 /* Default-568h@2x.png in Resources */,
 				E0911BDA2447672F003EE408 /* beer can.png in Resources */,
