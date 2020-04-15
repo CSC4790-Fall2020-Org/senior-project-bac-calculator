@@ -12,22 +12,6 @@ print ("Enter Time in hours passed since drinking")
 let time = 2.0
 //time in hours
 class BACFormula {
-<<<<<<< Updated upstream
-let index : Double
-
-init() {
-    index = 0
-}
-func WomCalc(amount: Int,weight: Int,time: Int)-> Double {
-    index = ((amount * 5.14)/weight * 0.66) - 0.015 * time
-    let womBAC = index 
-    return womBAC
-}
-func MenCalc(amount: Int, weight:Int, time:Int)-> Double {
-    index = ((amount * 5.14)/weight * 0.73) - 0.015 * time
-    let menBAC = index
-    return menBAC
-=======
     let index : Double
     
     init() {
@@ -43,7 +27,7 @@ func MenCalc(amount: Int, weight:Int, time:Int)-> Double {
         let menBAC = index
         return menBAC
     }
-    //
+    
     func Output(gender: String) {
     gender = "male"
     switch gender {
@@ -51,18 +35,5 @@ func MenCalc(amount: Int, weight:Int, time:Int)-> Double {
     case "female": print(womBAC)
     default: print ("Please specify male or female")
     }
->>>>>>> Stashed changes
 }
-
-}
-class Output {
-    let gender: String = "male"
-    switch gender {
-        case "male":
-        print(menBAC)
-        case "female":
-        print(womBAC)
-        default:
-        print ("Please specify male or female")
-    }
 }
