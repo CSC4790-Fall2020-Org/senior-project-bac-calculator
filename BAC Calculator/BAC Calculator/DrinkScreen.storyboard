@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drinks View Controller-->
+        <scene sceneID="WMK-Bp-rtP">
+            <objects>
+                <viewController storyboardIdentifier="drinksPage" title="Drinks View Controller" id="muz-n4-kKw" customClass="DrinkScreenViewController" customModule="BAC_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="drO-Yl-VlG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRj-IM-yMP">
+                                <rect key="frame" x="30" y="74" width="65" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nH0-BP-8B0">
+                                <rect key="frame" x="329" y="74" width="55" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAC LEVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5a5-Os-ZQO">
+                                <rect key="frame" x="163.5" y="194" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8Q-Qe-SUY">
+                                <rect key="frame" x="162.5" y="380" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pZ-zb-jhF">
+                                <rect key="frame" x="189" y="526" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jD1-FA-NiT">
+                                <rect key="frame" x="90" y="631" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlj-jo-dAq">
+                                <rect key="frame" x="285" y="631" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="n8Q-Qe-SUY" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="4q4-wG-jXo"/>
+                            <constraint firstItem="n8Q-Qe-SUY" firstAttribute="top" secondItem="5a5-Os-ZQO" secondAttribute="bottom" constant="165" id="6Uk-17-dX5"/>
+                            <constraint firstItem="5a5-Os-ZQO" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="150" id="8ai-Uw-Iib"/>
+                            <constraint firstItem="6Hd-2u-dp7" firstAttribute="trailing" secondItem="Nlj-jo-dAq" secondAttribute="trailing" constant="90" id="DoS-RY-fSX"/>
+                            <constraint firstItem="BRj-IM-yMP" firstAttribute="leading" secondItem="6Hd-2u-dp7" secondAttribute="leading" constant="30" id="J6O-bm-P1Q"/>
+                            <constraint firstItem="5a5-Os-ZQO" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="OEc-3h-34q"/>
+                            <constraint firstItem="nH0-BP-8B0" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="30" id="Q0A-Y1-J7J"/>
+                            <constraint firstItem="jD1-FA-NiT" firstAttribute="leading" secondItem="6Hd-2u-dp7" secondAttribute="leading" constant="90" id="b6z-Rq-s3s"/>
+                            <constraint firstItem="8pZ-zb-jhF" firstAttribute="top" secondItem="n8Q-Qe-SUY" secondAttribute="bottom" constant="125" id="bNX-e5-BhU"/>
+                            <constraint firstItem="6Hd-2u-dp7" firstAttribute="trailing" secondItem="nH0-BP-8B0" secondAttribute="trailing" constant="30" id="bq0-ub-8sY"/>
+                            <constraint firstItem="8pZ-zb-jhF" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="egE-zH-cgc"/>
+                            <constraint firstItem="BRj-IM-yMP" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="30" id="qpR-k9-gYR"/>
+                            <constraint firstItem="6Hd-2u-dp7" firstAttribute="bottom" secondItem="jD1-FA-NiT" secondAttribute="bottom" constant="210" id="snw-7R-gN4"/>
+                            <constraint firstItem="6Hd-2u-dp7" firstAttribute="bottom" secondItem="Nlj-jo-dAq" secondAttribute="bottom" constant="210" id="wfR-RJ-CIk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Hd-2u-dp7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vrh-W6-Ph0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="19"/>
+        </scene>
+    </scenes>
+</document>
