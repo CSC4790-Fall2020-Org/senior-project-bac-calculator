@@ -35,19 +35,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAC LEVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5a5-Os-ZQO">
-                                <rect key="frame" x="163.5" y="194" width="87" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="117" y="194" width="180" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8Q-Qe-SUY">
-                                <rect key="frame" x="162.5" y="389" width="89" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="149.5" y="389" width="115.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pZ-zb-jhF">
-                                <rect key="frame" x="189" y="560" width="36" height="21"/>
+                                <rect key="frame" x="189" y="566.5" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,6 +71,9 @@
                                     <constraint firstAttribute="height" constant="185" id="Uvw-PU-tJH"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="BeerCan"/>
+                                <connections>
+                                    <action selector="onTappedBeer:" destination="muz-n4-kKw" eventType="touchUpInside" id="pzi-6O-6dV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjT-LB-4uH">
                                 <rect key="frame" x="264" y="571" width="100" height="185"/>
@@ -79,14 +82,20 @@
                                     <constraint firstAttribute="height" constant="185" id="d08-59-cU0"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="WineGlass"/>
+                                <connections>
+                                    <action selector="onTappedWine:" destination="muz-n4-kKw" eventType="touchUpInside" id="rbo-Vz-4M3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjy-N0-zHe">
-                                <rect key="frame" x="144.5" y="420" width="125" height="135"/>
+                                <rect key="frame" x="144.5" y="426.5" width="125" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="htH-ck-Yi3"/>
                                     <constraint firstAttribute="width" constant="125" id="o2U-CA-FEE"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="ShotGlass"/>
+                                <connections>
+                                    <action selector="onTappedShot:" destination="muz-n4-kKw" eventType="touchUpInside" id="GVU-Xm-VFi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -117,6 +126,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Hd-2u-dp7"/>
                     </view>
+                    <connections>
+                        <outlet property="bacLevel" destination="5a5-Os-ZQO" id="lQJ-aI-hji"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vrh-W6-Ph0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

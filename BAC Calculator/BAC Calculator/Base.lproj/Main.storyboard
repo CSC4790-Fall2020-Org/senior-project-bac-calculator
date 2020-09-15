@@ -217,6 +217,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="9dM-QY-W2W"/>
                     <connections>
+                        <outlet property="birthdayField" destination="OeK-Dq-eSR" id="r7m-k5-qIC"/>
+                        <outlet property="emailField" destination="G7r-DK-gol" id="zlG-Z5-T8X"/>
+                        <outlet property="genderOption" destination="3me-bV-L6j" id="h4f-k1-Wnd"/>
+                        <outlet property="heightField" destination="8EV-ox-PJH" id="m7Q-BW-t7k"/>
+                        <outlet property="nameField" destination="fKP-9m-JAC" id="nRD-MB-lIK"/>
+                        <outlet property="usernameField" destination="y90-l3-NSs" id="RqW-Un-fcN"/>
+                        <outlet property="weightField" destination="fuK-Vg-cEb" id="MXY-BP-sBq"/>
                         <segue destination="W5w-m0-42n" kind="show" identifier="toDrinks" id="aOO-wy-0eh"/>
                     </connections>
                 </viewController>
