@@ -21,10 +21,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLE-E8-2Op">
-                                <rect key="frame" x="129.5" y="424" width="155" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Lets Drink!!!"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLE-E8-2Op">
+                                <rect key="frame" x="85" y="304" width="244" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="7mt-xO-7Ep"/>
+                                    <constraint firstAttribute="height" constant="288" id="XTG-tf-1ks"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Lets Drink!!!" backgroundImage="SoloCup"/>
                                 <connections>
                                     <action selector="onTappedLetsDrink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i6Q-eO-DrC"/>
                                 </connections>
@@ -45,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="118"/>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
         <!--User Info View Controller-->
         <scene sceneID="cvV-Cg-zvn">
@@ -224,7 +228,7 @@
                         <outlet property="nameField" destination="fKP-9m-JAC" id="nRD-MB-lIK"/>
                         <outlet property="usernameField" destination="y90-l3-NSs" id="RqW-Un-fcN"/>
                         <outlet property="weightField" destination="fuK-Vg-cEb" id="MXY-BP-sBq"/>
-                        <segue destination="W5w-m0-42n" kind="show" identifier="toDrinks" id="aOO-wy-0eh"/>
+                        <segue destination="W5w-m0-42n" kind="presentation" identifier="toDrinks" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="aOO-wy-0eh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZa-ch-rpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -242,4 +246,7 @@
             <point key="canvasLocation" x="1606" y="224"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SoloCup" width="1078" height="1259"/>
+    </resources>
 </document>
