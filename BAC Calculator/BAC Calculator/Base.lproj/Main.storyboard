@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,14 +36,14 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8wc-Ys-n23" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="NpK-RE-oe6"/>
                             <constraint firstItem="GLE-E8-2Op" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pv0-8r-cY7"/>
                             <constraint firstItem="8wc-Ys-n23" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RvT-2Q-Tez"/>
                             <constraint firstItem="GLE-E8-2Op" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oTd-33-Sw3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <segue destination="cbb-PD-3xZ" kind="show" identifier="userInfo" id="Yyd-AJ-XWA"/>
@@ -60,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWY-K4-E0c">
-                                <rect key="frame" x="65.5" y="100" width="283" height="48"/>
+                                <rect key="frame" x="66" y="100" width="282" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -122,7 +124,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldT-Ri-abs">
-                                <rect key="frame" x="50" y="344" width="61.5" height="21"/>
+                                <rect key="frame" x="50" y="344" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -172,7 +174,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUY-Pj-Atr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUY-Pj-Atr">
                                 <rect key="frame" x="138" y="563" width="138" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Cheers!!!"/>
@@ -181,7 +183,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="e85-wM-tt9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eHD-CT-9GP" firstAttribute="top" secondItem="fWY-K4-E0c" secondAttribute="bottom" constant="30" id="0xO-PS-Xqa"/>
                             <constraint firstItem="e85-wM-tt9" firstAttribute="trailing" secondItem="G7r-DK-gol" secondAttribute="trailing" constant="55" id="2C8-Zz-P0f"/>
@@ -217,7 +220,6 @@
                             <constraint firstItem="ySf-7y-MBl" firstAttribute="leading" secondItem="e85-wM-tt9" secondAttribute="leading" constant="50" id="wC6-TG-g4P"/>
                             <constraint firstItem="6Tc-cX-4e7" firstAttribute="leading" secondItem="e85-wM-tt9" secondAttribute="leading" constant="50" id="z47-FT-ljJ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="e85-wM-tt9"/>
                     </view>
                     <navigationItem key="navigationItem" id="9dM-QY-W2W"/>
                     <connections>
@@ -248,5 +250,8 @@
     </scenes>
     <resources>
         <image name="SoloCup" width="1078" height="1259"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
