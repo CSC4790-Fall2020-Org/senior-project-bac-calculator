@@ -16,6 +16,7 @@
 		6989D13F2509B5C800A76633 /* DrinkScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6989D13E2509B5C800A76633 /* DrinkScreen.storyboard */; };
 		6989D1432509B7BA00A76633 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989D1422509B7BA00A76633 /* UserInfoViewController.swift */; };
 		6989D1452509B97200A76633 /* DrinkScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989D1442509B97200A76633 /* DrinkScreenViewController.swift */; };
+		69BFD14F252D060C002BAE52 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BFD14E252D060C002BAE52 /* FriendsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		6989D13E2509B5C800A76633 /* DrinkScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DrinkScreen.storyboard; sourceTree = "<group>"; };
 		6989D1422509B7BA00A76633 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		6989D1442509B97200A76633 /* DrinkScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkScreenViewController.swift; sourceTree = "<group>"; };
+		69BFD14E252D060C002BAE52 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				696344032502E6270093DE52 /* AppDelegate.swift */,
+				69BFD14E252D060C002BAE52 /* FriendsViewController.swift */,
 				696344052502E6270093DE52 /* SceneDelegate.swift */,
 				696344072502E6270093DE52 /* ViewController.swift */,
 				6989D1422509B7BA00A76633 /* UserInfoViewController.swift */,
@@ -152,6 +155,7 @@
 				696344082502E6270093DE52 /* ViewController.swift in Sources */,
 				6989D1432509B7BA00A76633 /* UserInfoViewController.swift in Sources */,
 				696344042502E6270093DE52 /* AppDelegate.swift in Sources */,
+				69BFD14F252D060C002BAE52 /* FriendsViewController.swift in Sources */,
 				696344062502E6270093DE52 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

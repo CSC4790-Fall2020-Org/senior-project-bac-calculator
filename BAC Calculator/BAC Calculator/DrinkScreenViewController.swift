@@ -60,4 +60,9 @@ class DrinkScreenViewController: UIViewController {
         //count = count + 1
         //bacLevel.text = String(count)
     }
+    
+    @IBAction func onTappedFriends(_ sender: Any) {
+        performSegue(withIdentifier: "showFriends", sender: self)
+    }
+    
 }
