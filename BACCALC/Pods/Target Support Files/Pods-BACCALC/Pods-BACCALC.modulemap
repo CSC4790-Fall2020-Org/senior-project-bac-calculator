@@ -1,0 +1,6 @@
+framework module Pods_BACCALC {
+  umbrella header "Pods-BACCALC-umbrella.h"
+
+  export *
+  module * { export * }
+}
