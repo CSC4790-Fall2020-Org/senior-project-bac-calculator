@@ -1,0 +1,6 @@
+framework module Pods_BACCALC_BACCALCUITests {
+  umbrella header "Pods-BACCALC-BACCALCUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
