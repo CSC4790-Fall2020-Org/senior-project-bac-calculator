@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Firebase
 
 class DrinkScreenViewController: UIViewController {
     
@@ -18,6 +19,8 @@ class DrinkScreenViewController: UIViewController {
     var bac : Double = 0.0
     var count : Double = 0.0
     @IBOutlet weak var skull: UIImageView!
+    //var ref: DatabaseReference!
+    //ref = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()

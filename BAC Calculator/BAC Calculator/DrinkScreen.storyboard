@@ -140,11 +140,73 @@
                         <outlet property="Skull" destination="20Z-s1-kDK" id="0aG-ol-SOh"/>
                         <outlet property="bacLevel" destination="5a5-Os-ZQO" id="lQJ-aI-hji"/>
                         <segue destination="f8P-qQ-8jE" kind="show" identifier="showFriends" id="tUy-4R-ouk"/>
+                        <segue destination="CJF-Nq-3YL" kind="show" id="3S2-Rj-bYV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vrh-W6-Ph0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="18.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lhh-kk-FoH">
+            <objects>
+                <viewController id="CJF-Nq-3YL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tA6-SX-nfh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umi-iQ-MaY">
+                                <rect key="frame" x="110" y="300" width="194" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank-profile-picture-973460_1280" translatesAutoresizingMaskIntoConstraints="NO" id="oYt-3m-BAR">
+                                <rect key="frame" x="132" y="125" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="sBS-TP-6IN"/>
+                                    <constraint firstAttribute="height" constant="150" id="ua3-ZG-ng0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClJ-Ba-ej4">
+                                <rect key="frame" x="162" y="352" width="90.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Day drinking: mm/dd/yyyy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exq-iY-XqR">
+                                <rect key="frame" x="21.5" y="391" width="371.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Time Drinks: ##" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUO-Qe-s9Q">
+                                <rect key="frame" x="87" y="439.5" width="240" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ROQ-O1-HlF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="umi-iQ-MaY" firstAttribute="top" secondItem="oYt-3m-BAR" secondAttribute="bottom" constant="25" id="4Tb-Bh-cDU"/>
+                            <constraint firstItem="oYt-3m-BAR" firstAttribute="centerX" secondItem="tA6-SX-nfh" secondAttribute="centerX" id="EeI-uy-USB"/>
+                            <constraint firstItem="ClJ-Ba-ej4" firstAttribute="centerX" secondItem="tA6-SX-nfh" secondAttribute="centerX" id="GiS-Oy-wLU"/>
+                            <constraint firstItem="fUO-Qe-s9Q" firstAttribute="centerX" secondItem="tA6-SX-nfh" secondAttribute="centerX" id="JrO-rI-jly"/>
+                            <constraint firstItem="umi-iQ-MaY" firstAttribute="centerX" secondItem="tA6-SX-nfh" secondAttribute="centerX" id="Jwg-NT-cG6"/>
+                            <constraint firstItem="ClJ-Ba-ej4" firstAttribute="top" secondItem="umi-iQ-MaY" secondAttribute="bottom" constant="10" id="Mxu-Hf-1hm"/>
+                            <constraint firstItem="fUO-Qe-s9Q" firstAttribute="top" secondItem="exq-iY-XqR" secondAttribute="bottom" constant="15" id="YnG-7m-w0z"/>
+                            <constraint firstItem="exq-iY-XqR" firstAttribute="top" secondItem="ClJ-Ba-ej4" secondAttribute="bottom" constant="15" id="lhI-mR-Iug"/>
+                            <constraint firstItem="oYt-3m-BAR" firstAttribute="top" secondItem="ROQ-O1-HlF" secondAttribute="top" constant="125" id="nrr-cX-GQf"/>
+                            <constraint firstItem="exq-iY-XqR" firstAttribute="centerX" secondItem="tA6-SX-nfh" secondAttribute="centerX" id="tu9-er-FME"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZWk-3A-pZk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JhB-Ut-kJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="-305"/>
         </scene>
         <!--Friends View Controller-->
         <scene sceneID="gPS-Fj-Tcb">
@@ -183,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUR-vX-niM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="995.65217391304361" y="19.419642857142858"/>
+            <point key="canvasLocation" x="887" y="352"/>
         </scene>
     </scenes>
     <resources>
@@ -192,6 +254,7 @@
         <image name="GreyCircle" width="1175" height="1185"/>
         <image name="ShotGlass" width="1089" height="1328"/>
         <image name="WineGlass" width="1108" height="1793"/>
+        <image name="blank-profile-picture-973460_1280" width="1280" height="1280"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Firebase
 
 class UserInfoViewCotroller: UIViewController {
 
@@ -25,6 +26,8 @@ class UserInfoViewCotroller: UIViewController {
     var weight : String = ""
     var gender : Int = 3
     var genderNumValue : Double = 0.0
+    //var ref: DatabaseReference!
+    //ref = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +48,6 @@ class UserInfoViewCotroller: UIViewController {
         }else{
             genderNumValue = 4.7
         }
-     
+       
     }
 }
