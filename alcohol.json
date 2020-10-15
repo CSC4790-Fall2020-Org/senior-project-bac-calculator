@@ -1,0 +1,345 @@
+{
+"Beer": {
+    "One" :{
+        "Name":"Bud Light",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.20
+    },
+    "Two" :{
+        "Name":"Natural Light",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.20
+    },
+    "Three" :{
+        "Name":"Miller Light",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.20
+    },
+    "Four" :{
+        "Name":"Genesse Light",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.20
+    },
+    "Five" :{
+        "Name":"Busch",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.30
+    },
+    "Six" :{
+        "Name":"Blue Moon",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 5.70
+    },
+    "Seven" :{
+        "Name":"Budweiser",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 5.00
+    },
+    "Eight" :{
+        "Name":"Coors Light",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 5.00
+    },
+    "Nine" :{
+        "Name":"Budweiser",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.20
+    },
+    "Ten" :{
+        "Name":"Michelob Ultra",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.20
+    },
+    "Eleven" :{
+        "Name":"Corona Light",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.10
+    },
+    "Twelve" :{
+        "Name":"Modelo",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.40
+    },
+    "Thirteen" :{
+        "Name":"Busch Light",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.10
+    },
+    "Fourteen" :{
+        "Name":"Heineken Light",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.20
+    },
+    "Fifteen" :{
+        "Name":"Keystone Light",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.20
+    },
+    "Sixteen" :{
+        "Name":"Bud Light Lime",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.20
+    },
+    "Seventeen" :{
+        "Name":"Bud Light Lime",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.20
+    },
+    "Eighteen" :{
+        "Name":"Guiness Draught",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.27
+    },
+    "Nineteen" :{
+        "Name":"Rolling Rock",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.50
+    },
+    "Twenty" :{
+        "Name":"Coors Banquet",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 5.00
+    },
+    "Twenty One" :{
+        "Name":"Stella Artois",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 5.20
+    },
+    "Twenty Two" :{
+        "Name":"Sam Adams Summer Ale",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 5.30
+    },
+    "Twenty Three" :{
+        "Name":"PBR",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.74
+    },
+    "Twenty Four" :{
+        "Name":"Yuengling Lager",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.50
+    },
+    "Twenty Five" :{
+        "Name":"Corona Extra",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.60
+    },
+    "Twenty Six" :{
+        "Name":"Sam Adams Boston Ale",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 5.40
+    },
+    "Twenty Seven" :{
+        "Name":"Bass Ale",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 5.00
+    },
+    "Twenty Eight" :{
+        "Name":"Miller High Life",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.60
+    }
+},
+ "Wine": {
+    "One":{
+        "Name":"White Zinfadel",
+        "Fluid Ounces":5.00,
+        "Alcohol Percentage": 12.50
+    },
+    "Two":{
+        "Name":"Moscato",
+        "Fluid Ounces":5.00,
+        "Alcohol Percentage": 6.0
+    },
+    "Three":{
+        "Name":"Merlot",
+        "Fluid Ounces":5.00,
+        "Alcohol Percentage": 13.50
+    },
+    "Four":{
+        "Name":"Cabernet Sauvignon",
+        "Fluid Ounces":5.00,
+        "Alcohol Percentage": 13.50
+    },
+    "Five":{
+        "Name":"Chardonnay",
+        "Fluid Ounces":5.00,
+        "Alcohol Percentage": 14.00
+    },
+    "Six":{
+        "Name":"Pinot Noir",
+        "Fluid Ounces":5.00,
+        "Alcohol Percentage": 13.50
+    },
+    "Seven":{
+        "Name":"Chardonnay",
+        "Fluid Ounces":5.00,
+        "Alcohol Percentage": 14.00
+    },
+    "Eight":{
+        "Name":"Sauvignon Blanc",
+        "Fluid Ounces":5.00,
+        "Alcohol Percentage": 14.00
+    }
+ },
+ "Seltzer": {
+     "One":{
+        "Name":"White Claw",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 5.00 
+     },
+     "Two":{
+        "Name":"Truly",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 5.00 
+     },
+     "Three":{
+        "Name":"Bud Light Seltzer",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 5.00 
+     },
+     "Four":{
+        "Name":"Bon & Viv",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.50 
+     },
+     "Five":{
+        "Name":"Smirnoff Seltzer",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.50 
+     },
+     "Six":{
+        "Name":"Henrys",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.20 
+     },
+     "Seven":{
+        "Name":"Corona Seltzer",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.50 
+     },
+     "Eight":{
+        "Name":"Vizzy",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 5.00 
+     },
+     "Nine":{
+        "Name":"Press",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.00 
+     },
+     "Ten":{
+        "Name":"Barefoot",
+        "Fluid Ounces":12.00,
+        "Alcohol Percentage": 4.00 
+     }
+ },
+ "Liquor": {
+     "One": {
+        "Name":"Jack Daniels",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 47.00 
+     },
+     "Two" :{
+        "Name":"Bacardi",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 61.00
+    },
+    "Three" :{
+        "Name":"Bacardi 151",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 75.00
+    },
+    "Four" :{
+        "Name":"Bacardi 8",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Five" :{
+        "Name":"Bacardi Carta Blanca",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Six" :{
+        "Name":"Baileys",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 17.00
+    },
+    "Seven" :{
+        "Name":"Don Julio",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Eight" :{
+        "Name":"Smirnoff",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Nine" :{
+        "Name":"Captain Morgan",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 35.00
+    },
+    "Ten" :{
+        "Name":"Kahlua",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 20.00
+    },
+    "Eleven" :{
+        "Name":"Crown Royal",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Twelve" :{
+        "Name":"Jim Beam",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Thirteen" :{
+        "Name":"Grey Goose",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Fourteen" :{
+        "Name":"Jose Cuervo",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 38.00
+    },
+    "Fifteen" :{
+        "Name":"Svedka",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Sixteen" :{
+        "Name":"Vladimir",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Seventeen" :{
+        "Name":"Absolut",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Eighteen" :{
+        "Name":"Hennesey",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Nineteen" :{
+        "Name":"Jameson",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Twenty" :{
+        "Name":"Titos",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 40.00
+    },
+    "Twenty One" :{
+        "Name":"Jagermeister",
+        "Fluid Ounces":1.50,
+        "Alcohol Percentage": 35.00
+    }
+ }
+}
