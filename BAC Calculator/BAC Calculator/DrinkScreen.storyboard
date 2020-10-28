@@ -104,20 +104,21 @@
                                     <action selector="onTappedFriends:" destination="muz-n4-kKw" eventType="touchUpInside" id="0h1-qB-eCi"/>
                                 </connections>
                             </button>
-                            <pickerView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-Go-ypM">
-                                <rect key="frame" x="0.0" y="637" width="414" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unsafe To Drive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSy-q0-29x">
                                 <rect key="frame" x="106" y="329" width="202" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-Go-ypM">
+                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Hd-2u-dp7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Hd-2u-dp7" firstAttribute="bottom" secondItem="qqw-Go-ypM" secondAttribute="bottom" id="0Q3-LD-GtM"/>
                             <constraint firstItem="n8Q-Qe-SUY" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="4q4-wG-jXo"/>
                             <constraint firstItem="hyf-ap-kxA" firstAttribute="leading" secondItem="6Hd-2u-dp7" secondAttribute="leading" constant="50" id="6DS-4V-JiS"/>
                             <constraint firstItem="n8Q-Qe-SUY" firstAttribute="top" secondItem="5a5-Os-ZQO" secondAttribute="bottom" constant="165" id="6Uk-17-dX5"/>
@@ -125,6 +126,7 @@
                             <constraint firstItem="n8Q-Qe-SUY" firstAttribute="top" secondItem="20Z-s1-kDK" secondAttribute="bottom" constant="3" id="AUe-zQ-Ecf"/>
                             <constraint firstItem="8pZ-zb-jhF" firstAttribute="top" secondItem="cjy-N0-zHe" secondAttribute="bottom" constant="5" id="CrP-mZ-XLw"/>
                             <constraint firstItem="6Hd-2u-dp7" firstAttribute="trailing" secondItem="Nlj-jo-dAq" secondAttribute="trailing" constant="80" id="DoS-RY-fSX"/>
+                            <constraint firstItem="qqw-Go-ypM" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="KAg-Gf-HCy"/>
                             <constraint firstItem="ZSy-q0-29x" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="LDg-uU-saZ"/>
                             <constraint firstItem="5a5-Os-ZQO" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="OEc-3h-34q"/>
                             <constraint firstItem="Nlj-jo-dAq" firstAttribute="top" secondItem="BjT-LB-4uH" secondAttribute="bottom" constant="5" id="P9D-xz-Duu"/>
@@ -136,6 +138,7 @@
                             <constraint firstItem="8pZ-zb-jhF" firstAttribute="top" secondItem="n8Q-Qe-SUY" secondAttribute="bottom" constant="150" id="bNX-e5-BhU"/>
                             <constraint firstItem="6Hd-2u-dp7" firstAttribute="trailing" secondItem="nH0-BP-8B0" secondAttribute="trailing" constant="30" id="bq0-ub-8sY"/>
                             <constraint firstItem="8pZ-zb-jhF" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="egE-zH-cgc"/>
+                            <constraint firstItem="6Hd-2u-dp7" firstAttribute="trailing" secondItem="qqw-Go-ypM" secondAttribute="trailing" id="evf-1Y-Rcd"/>
                             <constraint firstItem="xhh-bx-SsO" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="80" id="f63-jp-pdw"/>
                             <constraint firstItem="Spy-ux-F7t" firstAttribute="leading" secondItem="6Hd-2u-dp7" secondAttribute="leading" constant="30" id="kB0-JJ-YQz"/>
                             <constraint firstItem="20Z-s1-kDK" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="qcS-Xc-X4v"/>
@@ -144,6 +147,7 @@
                             <constraint firstItem="jD1-FA-NiT" firstAttribute="top" secondItem="hyf-ap-kxA" secondAttribute="bottom" constant="5" id="uzo-ug-yAD"/>
                             <constraint firstItem="cjy-N0-zHe" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="vjf-V1-QJT"/>
                             <constraint firstItem="6Hd-2u-dp7" firstAttribute="bottom" secondItem="Nlj-jo-dAq" secondAttribute="bottom" constant="80" id="wfR-RJ-CIk"/>
+                            <constraint firstItem="qqw-Go-ypM" firstAttribute="leading" secondItem="6Hd-2u-dp7" secondAttribute="leading" id="zSz-50-Kfx"/>
                             <constraint firstItem="ZSy-q0-29x" firstAttribute="top" secondItem="xhh-bx-SsO" secondAttribute="bottom" constant="35" id="zd3-tw-CAw"/>
                             <constraint firstItem="6Hd-2u-dp7" firstAttribute="trailing" secondItem="BjT-LB-4uH" secondAttribute="trailing" constant="50" id="znU-8x-yf5"/>
                         </constraints>
@@ -269,6 +273,9 @@
         <image name="ShotGlass" width="1089" height="1328"/>
         <image name="WineGlass" width="1108" height="1793"/>
         <image name="blank-profile-picture-973460_1280" width="1280" height="1280"/>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
