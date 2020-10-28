@@ -16,10 +16,13 @@
 		6989D13F2509B5C800A76633 /* DrinkScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6989D13E2509B5C800A76633 /* DrinkScreen.storyboard */; };
 		6989D1432509B7BA00A76633 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989D1422509B7BA00A76633 /* UserInfoViewController.swift */; };
 		6989D1452509B97200A76633 /* DrinkScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989D1442509B97200A76633 /* DrinkScreenViewController.swift */; };
+		699DBBE0254912190089643B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 699DBBDF254912190089643B /* GoogleService-Info.plist */; };
 		69BFD14F252D060C002BAE52 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BFD14E252D060C002BAE52 /* FriendsViewController.swift */; };
+		76C2386CF618110CB2B3F15C /* Pods_BAC_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2BD368185C5C9A80CC5241 /* Pods_BAC_Calculator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1819966BF6F14861344E90A8 /* Pods-BAC Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAC Calculator.release.xcconfig"; path = "Target Support Files/Pods-BAC Calculator/Pods-BAC Calculator.release.xcconfig"; sourceTree = "<group>"; };
 		696344002502E6270093DE52 /* BAC Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BAC Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		696344032502E6270093DE52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		696344052502E6270093DE52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +34,10 @@
 		6989D13E2509B5C800A76633 /* DrinkScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DrinkScreen.storyboard; sourceTree = "<group>"; };
 		6989D1422509B7BA00A76633 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		6989D1442509B97200A76633 /* DrinkScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkScreenViewController.swift; sourceTree = "<group>"; };
+		699DBBDF254912190089643B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		69BFD14E252D060C002BAE52 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		7EDE6006B9135918EAAAA2A2 /* Pods-BAC Calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAC Calculator.debug.xcconfig"; path = "Target Support Files/Pods-BAC Calculator/Pods-BAC Calculator.debug.xcconfig"; sourceTree = "<group>"; };
+		DE2BD368185C5C9A80CC5241 /* Pods_BAC_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BAC_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +45,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C2386CF618110CB2B3F15C /* Pods_BAC_Calculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4890061889877E3490BCA177 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EDE6006B9135918EAAAA2A2 /* Pods-BAC Calculator.debug.xcconfig */,
+				1819966BF6F14861344E90A8 /* Pods-BAC Calculator.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		696343F72502E6270093DE52 = {
 			isa = PBXGroup;
 			children = (
 				696344022502E6270093DE52 /* BAC Calculator */,
 				696344012502E6270093DE52 /* Products */,
+				4890061889877E3490BCA177 /* Pods */,
+				7BD64964106FBBD02BD62678 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,8 +94,17 @@
 				6963440C2502E6330093DE52 /* Assets.xcassets */,
 				6963440E2502E6330093DE52 /* LaunchScreen.storyboard */,
 				696344112502E6330093DE52 /* Info.plist */,
+				699DBBDF254912190089643B /* GoogleService-Info.plist */,
 			);
 			path = "BAC Calculator";
+			sourceTree = "<group>";
+		};
+		7BD64964106FBBD02BD62678 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE2BD368185C5C9A80CC5241 /* Pods_BAC_Calculator.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 696344142502E6330093DE52 /* Build configuration list for PBXNativeTarget "BAC Calculator" */;
 			buildPhases = (
+				3008B437089E4B057C22C987 /* [CP] Check Pods Manifest.lock */,
 				696343FC2502E6270093DE52 /* Sources */,
 				696343FD2502E6270093DE52 /* Frameworks */,
 				696343FE2502E6270093DE52 /* Resources */,
+				E3D5094B3B5F85751F0EC818 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,12 +169,55 @@
 			files = (
 				696344102502E6330093DE52 /* LaunchScreen.storyboard in Resources */,
 				6989D13F2509B5C800A76633 /* DrinkScreen.storyboard in Resources */,
+				699DBBE0254912190089643B /* GoogleService-Info.plist in Resources */,
 				6963440D2502E6330093DE52 /* Assets.xcassets in Resources */,
 				6963440B2502E6270093DE52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3008B437089E4B057C22C987 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BAC Calculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3D5094B3B5F85751F0EC818 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BAC Calculator/Pods-BAC Calculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BAC Calculator/Pods-BAC Calculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BAC Calculator/Pods-BAC Calculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		696343FC2502E6270093DE52 /* Sources */ = {
@@ -298,6 +371,7 @@
 		};
 		696344152502E6330093DE52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EDE6006B9135918EAAAA2A2 /* Pods-BAC Calculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,6 +389,7 @@
 		};
 		696344162502E6330093DE52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1819966BF6F14861344E90A8 /* Pods-BAC Calculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
