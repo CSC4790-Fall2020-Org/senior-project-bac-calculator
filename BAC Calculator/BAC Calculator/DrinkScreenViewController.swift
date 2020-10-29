@@ -11,7 +11,7 @@ import Firebase
 
 class DrinkScreenViewController: UIViewController {
     
-    private let dataSource = ["Beer 1", "Beer 2", "Beer 3", "Beer 4", "Beer 5" ]
+    private let dataSource = ["Bud Light", "Miller Lite", "Natrual Light", "Coors Light", "Blue Moon", "Bush Light", "Rolling Rock", "PBR"]
     
     @IBOutlet weak var bacLevel: UILabel!
     var ounces : Double = 0
@@ -23,7 +23,8 @@ class DrinkScreenViewController: UIViewController {
     @IBOutlet weak var doNotDrive: UILabel!
     @IBOutlet weak var skull: UIImageView!
     @IBOutlet weak var beerScroll: UIPickerView!
-    //var ref:FIRDatabaseReference = Database.database().reference()
+    var dbRef:DatabaseReference!
+    //var alcInfo = [FireBaseData]()
     //var ref: DatabaseReference?
     //ref = Database.database().reference()
     
@@ -102,5 +103,10 @@ extension DrinkScreenViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return dataSource[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("\(dataSource[row])")
+        beerScroll.isHidden = true
     }
 }
