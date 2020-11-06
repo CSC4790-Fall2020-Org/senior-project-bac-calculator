@@ -7,7 +7,11 @@
 //
 
 import UIKit
-//import Firebase
+import SwiftUI
+import Firebase
+import FirebaseAuth
+//import FirebaseUI
+
 
 class ViewController: UIViewController {
 
@@ -15,8 +19,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func onTappedLetsDrink(_ sender: Any) {
+        //FUIAuth.defultAuthUI()
         performSegue(withIdentifier: "userInfo", sender: self)
     }
     

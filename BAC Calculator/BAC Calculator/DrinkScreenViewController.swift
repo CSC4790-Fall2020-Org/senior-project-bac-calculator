@@ -8,11 +8,16 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class DrinkScreenViewController: UIViewController {
     
-    private let dataSource = ["Bud Light", "Miller Lite", "Natrual Light", "Coors Light", "Blue Moon", "Bush Light", "Rolling Rock", "PBR"]
-    
+    var beerData = [String]()
+    var newBeerData = [String]()
+    //var beerRef:DatabaseReference?
+    //var beerRef = Database.database().reference()
+    //var databaseHandle:DatabaseHandle?
+    //var beerList = [BeerModel]()
     @IBOutlet weak var bacLevel: UILabel!
     var ounces : Double = 0
     var UserInforVC = UserInfoViewCotroller()
@@ -23,10 +28,12 @@ class DrinkScreenViewController: UIViewController {
     @IBOutlet weak var doNotDrive: UILabel!
     @IBOutlet weak var skull: UIImageView!
     @IBOutlet weak var beerScroll: UIPickerView!
-    var dbRef:DatabaseReference!
-    //var alcInfo = [FireBaseData]()
-    //var ref: DatabaseReference?
-    //ref = Database.database().reference()
+    //var dbRef:DatabaseReference!
+    //let wineRef = Database.database().reference().child("Wine")
+    //let seltzRef = Database.database().reference().child("Seltzer")
+    //let liquorRef = Database.database().reference().child("Liquor")
+    let ref = Database.database().reference()
+    let dataRef = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +42,36 @@ class DrinkScreenViewController: UIViewController {
         skull.isHidden = true
         beerScroll.isHidden = true
         doNotDrive.isHidden = true
+        
+        
+        
         beerScroll.dataSource = self
         beerScroll.delegate = self
+        print("MY NAME IS CHRISTOPHER LOUMEAU")
+        
+        ref.child("Beer").observeSingleEvent(of: .value) { (snapshot) in
+            for child in snapshot.children {
+                let snap = child as! DataSnapshot
+                let key = snap.key
+                self.dataRef.child("Beer").child(key).observeSingleEvent(of: .value) {(snapshot) in
+                    for child in snapshot.children {
+                        let nameSnap = child as! DataSnapshot
+                        let nameKey = nameSnap.key
+                        let nameValue = nameSnap.value!
+                        if nameKey == "Name" {
+                            self.beerData.append(nameValue as! String)
+                        }
+                        print(self.beerData)
+                        print(nameKey, ": ", nameValue)
+                    }
+                   // print(self.beerData)
+                    self.newBeerData = self.beerData
+                    }
+                //print(self.beerData)
+            }
+            //print(self.beerData)
+        }
+        print(newBeerData)
     }
     
     func calculateBAC(){
@@ -85,6 +120,9 @@ class DrinkScreenViewController: UIViewController {
         performSegue(withIdentifier: "showFriends", sender: self)
     }
     
+    @IBAction func onTappedProfile(_ sender: Any) {
+        performSegue(withIdentifier: "showProfile", sender: self)
+    }
 }
 
 extension DrinkScreenViewController: UIPickerViewDelegate, UIPickerViewDataSource{
@@ -94,7 +132,7 @@ extension DrinkScreenViewController: UIPickerViewDelegate, UIPickerViewDataSourc
    }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return dataSource.count
+        return beerData.count
     }
     
     //func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -102,11 +140,22 @@ extension DrinkScreenViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     //}
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return dataSource[row]
+        return beerData[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("\(dataSource[row])")
+        print("\(beerData[row])")
         beerScroll.isHidden = true
+    }
+}
+class BeerModel {
+    var Name: String?
+    var FluidOunces: String?
+    var AlcoholPercentage: String?
+    
+    init(Name:String?, FluidOunces:String?, AlcoholPercentage:String?) {
+        self.Name = Name;
+        self.FluidOunces = FluidOunces;
+        self.AlcoholPercentage = AlcoholPercentage;
     }
 }

@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,12 +24,6 @@
                                     <constraint firstAttribute="height" constant="170" id="z8H-pQ-INJ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nH0-BP-8B0">
-                                <rect key="frame" x="329" y="74" width="55" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAC LEVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5a5-Os-ZQO">
                                 <rect key="frame" x="117" y="194" width="180" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -114,6 +108,14 @@
                                 <rect key="frame" x="0.0" y="646" width="414" height="216"/>
                                 <color key="backgroundColor" systemColor="placeholderTextColor"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2s-X6-AX2">
+                                <rect key="frame" x="328" y="74" width="56" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Profile"/>
+                                <connections>
+                                    <action selector="onTappedProfile:" destination="muz-n4-kKw" eventType="touchUpInside" id="3wh-KU-KRJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Hd-2u-dp7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -122,6 +124,7 @@
                             <constraint firstItem="n8Q-Qe-SUY" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="4q4-wG-jXo"/>
                             <constraint firstItem="hyf-ap-kxA" firstAttribute="leading" secondItem="6Hd-2u-dp7" secondAttribute="leading" constant="50" id="6DS-4V-JiS"/>
                             <constraint firstItem="n8Q-Qe-SUY" firstAttribute="top" secondItem="5a5-Os-ZQO" secondAttribute="bottom" constant="165" id="6Uk-17-dX5"/>
+                            <constraint firstItem="6Hd-2u-dp7" firstAttribute="trailing" secondItem="b2s-X6-AX2" secondAttribute="trailing" constant="30" id="8Ye-oo-x5I"/>
                             <constraint firstItem="5a5-Os-ZQO" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="150" id="8ai-Uw-Iib"/>
                             <constraint firstItem="n8Q-Qe-SUY" firstAttribute="top" secondItem="20Z-s1-kDK" secondAttribute="bottom" constant="3" id="AUe-zQ-Ecf"/>
                             <constraint firstItem="8pZ-zb-jhF" firstAttribute="top" secondItem="cjy-N0-zHe" secondAttribute="bottom" constant="5" id="CrP-mZ-XLw"/>
@@ -130,13 +133,11 @@
                             <constraint firstItem="ZSy-q0-29x" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="LDg-uU-saZ"/>
                             <constraint firstItem="5a5-Os-ZQO" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="OEc-3h-34q"/>
                             <constraint firstItem="Nlj-jo-dAq" firstAttribute="top" secondItem="BjT-LB-4uH" secondAttribute="bottom" constant="5" id="P9D-xz-Duu"/>
-                            <constraint firstItem="nH0-BP-8B0" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="30" id="Q0A-Y1-J7J"/>
                             <constraint firstItem="xhh-bx-SsO" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="TfK-MX-2qG"/>
                             <constraint firstItem="20Z-s1-kDK" firstAttribute="top" secondItem="5a5-Os-ZQO" secondAttribute="bottom" constant="51" id="WdI-PW-lWp"/>
                             <constraint firstItem="Spy-ux-F7t" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="30" id="aMT-jI-e06"/>
                             <constraint firstItem="jD1-FA-NiT" firstAttribute="leading" secondItem="6Hd-2u-dp7" secondAttribute="leading" constant="80" id="b6z-Rq-s3s"/>
                             <constraint firstItem="8pZ-zb-jhF" firstAttribute="top" secondItem="n8Q-Qe-SUY" secondAttribute="bottom" constant="150" id="bNX-e5-BhU"/>
-                            <constraint firstItem="6Hd-2u-dp7" firstAttribute="trailing" secondItem="nH0-BP-8B0" secondAttribute="trailing" constant="30" id="bq0-ub-8sY"/>
                             <constraint firstItem="8pZ-zb-jhF" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="egE-zH-cgc"/>
                             <constraint firstItem="6Hd-2u-dp7" firstAttribute="trailing" secondItem="qqw-Go-ypM" secondAttribute="trailing" id="evf-1Y-Rcd"/>
                             <constraint firstItem="xhh-bx-SsO" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="80" id="f63-jp-pdw"/>
@@ -144,6 +145,7 @@
                             <constraint firstItem="20Z-s1-kDK" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="qcS-Xc-X4v"/>
                             <constraint firstItem="6Hd-2u-dp7" firstAttribute="bottom" secondItem="jD1-FA-NiT" secondAttribute="bottom" constant="80" id="snw-7R-gN4"/>
                             <constraint firstItem="n8Q-Qe-SUY" firstAttribute="top" secondItem="xhh-bx-SsO" secondAttribute="bottom" constant="105" id="svJ-Rm-OBC"/>
+                            <constraint firstItem="b2s-X6-AX2" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="30" id="uVv-C2-dL4"/>
                             <constraint firstItem="jD1-FA-NiT" firstAttribute="top" secondItem="hyf-ap-kxA" secondAttribute="bottom" constant="5" id="uzo-ug-yAD"/>
                             <constraint firstItem="cjy-N0-zHe" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="vjf-V1-QJT"/>
                             <constraint firstItem="6Hd-2u-dp7" firstAttribute="bottom" secondItem="Nlj-jo-dAq" secondAttribute="bottom" constant="80" id="wfR-RJ-CIk"/>
@@ -158,7 +160,7 @@
                         <outlet property="beerScroll" destination="qqw-Go-ypM" id="Po2-Dy-7Np"/>
                         <outlet property="doNotDrive" destination="ZSy-q0-29x" id="Y2X-H4-V2D"/>
                         <segue destination="f8P-qQ-8jE" kind="show" identifier="showFriends" id="tUy-4R-ouk"/>
-                        <segue destination="CJF-Nq-3YL" kind="show" id="3S2-Rj-bYV"/>
+                        <segue destination="CJF-Nq-3YL" kind="show" identifier="showProfile" id="3S2-Rj-bYV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vrh-W6-Ph0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
