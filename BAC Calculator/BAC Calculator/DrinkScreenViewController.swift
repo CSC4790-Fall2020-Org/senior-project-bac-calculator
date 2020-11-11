@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 
 class DrinkScreenViewController: UIViewController {
     
@@ -44,35 +45,62 @@ class DrinkScreenViewController: UIViewController {
         doNotDrive.isHidden = true
         
         
-        
         beerScroll.dataSource = self
         beerScroll.delegate = self
         print("MY NAME IS CHRISTOPHER LOUMEAU")
         
-        ref.child("Beer").observeSingleEvent(of: .value) { (snapshot) in
-            for child in snapshot.children {
-                let snap = child as! DataSnapshot
-                let key = snap.key
-                self.dataRef.child("Beer").child(key).observeSingleEvent(of: .value) {(snapshot) in
-                    for child in snapshot.children {
-                        let nameSnap = child as! DataSnapshot
-                        let nameKey = nameSnap.key
-                        let nameValue = nameSnap.value!
-                        if nameKey == "Name" {
-                            self.beerData.append(nameValue as! String)
-                        }
-                        print(self.beerData)
-                        print(nameKey, ": ", nameValue)
-                    }
-                   // print(self.beerData)
-                    self.newBeerData = self.beerData
-                    }
-                //print(self.beerData)
-            }
-            //print(self.beerData)
-        }
-        print(newBeerData)
+        
+        //for i in 1...28 {
+        let uid = 1
+        ref.child("Beer").child(String(uid)).child("Name").observeSingleEvent(of: .value,with: {(snapshot) in
+            
+
+            print(snapshot)
+            let beer = snapshot.value
+            self.beerData.insert(beer as! String, at: uid-1)
+            print(self.beerData)
+
+        }, withCancel: nil)
+        //}
+        print(self.beerData)
     }
+    
+//    func funtion(){
+//        var rootRef: DatabaseReference!
+//        var refHandle: UInt!
+//        var haneRef: DatabaseReference!
+//        var numbersArray = [Int] ()
+//
+//        rootRef = Database.database().reference()
+//        haneRef = rootRef.child("Beer")
+//
+//        haneRef.queryOrdered(byChild: "lg_Et harcaması").queryLimited(toLast: 20).observe(.childAdded, with: { (snapshot) in
+//                    let hhtype = snapshot.value!["Beer"] as? Int
+//                    numbersArray.append(hhtype!)
+//                    print(numbersArray)
+//                })
+//    }
+    
+//    func displayBeer() -> [String]{
+//        ref.child("Beer").observeSingleEvent(of: .value) { (snapshot) in
+//            for child in snapshot.children {
+//                let snap = child as! DataSnapshot
+//                let key = snap.key
+//                self.dataRef.child("Beer").child(key).observeSingleEvent(of: .value) {(snapshot) in
+//                    for child in snapshot.children {
+//                        let nameSnap = child as! DataSnapshot
+//                        let nameKey = nameSnap.key
+//                        let nameValue = nameSnap.value!
+//                        if nameKey == "Name" {
+//                            self.beerData.append(nameValue as! String)
+//                        }
+//                        return self.beerData
+//                        print(nameKey, ": ", nameValue)
+//                    }
+//                    }
+//            }
+//        }
+//    }
     
     func calculateBAC(){
         //genderCof = UserInforVC.genderNumValue
