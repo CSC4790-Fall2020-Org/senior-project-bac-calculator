@@ -35,6 +35,7 @@ class DrinkScreenViewController: UIViewController {
     //let liquorRef = Database.database().reference().child("Liquor")
     let ref = Database.database().reference()
     let dataRef = Database.database().reference()
+    let dispatchGroup = DispatchGroup()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,25 +45,31 @@ class DrinkScreenViewController: UIViewController {
         beerScroll.isHidden = true
         doNotDrive.isHidden = true
         
-        
-        beerScroll.dataSource = self
-        beerScroll.delegate = self
         print("MY NAME IS CHRISTOPHER LOUMEAU")
         
-        
+        self.dispatchGroup.enter()
         //for i in 1...28 {
         let uid = 1
         ref.child("Beer").child(String(uid)).child("Name").observeSingleEvent(of: .value,with: {(snapshot) in
             
-
-            print(snapshot)
+            //print(snapshot)
             let beer = snapshot.value
-            self.beerData.insert(beer as! String, at: uid-1)
-            print(self.beerData)
-
+            self.beerData.insert(beer as! String, at: i-1)
+            //print(self.beerData)
+            self.dispatchGroup.leave()
+            
         }, withCancel: nil)
         //}
-        print(self.beerData)
+        
+        self.dispatchGroup.notify(queue: DispatchQueue.main, execute: {
+            self.newBeerData.append(self.beerData[0])
+            print(self.newBeerData)
+            print(self.newBeerData.count)
+        })
+        
+        self.beerScroll.dataSource = self
+        self.beerScroll.delegate = self
+        self.beerScroll.reloadAllComponents()
     }
     
 //    func funtion(){
@@ -160,7 +167,7 @@ extension DrinkScreenViewController: UIPickerViewDelegate, UIPickerViewDataSourc
    }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return beerData.count
+        return newBeerData.count
     }
     
     //func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -168,11 +175,11 @@ extension DrinkScreenViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     //}
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return beerData[row]
+        return newBeerData[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("\(beerData[row])")
+        print("\(newBeerData[row])")
         beerScroll.isHidden = true
     }
 }
