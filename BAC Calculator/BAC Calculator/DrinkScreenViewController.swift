@@ -54,7 +54,7 @@ class DrinkScreenViewController: UIViewController {
             
             //print(snapshot)
             let beer = snapshot.value
-            self.beerData.insert(beer as! String, at: i-1)
+            self.beerData.insert(beer as! String, at: uid-1)
             //print(self.beerData)
             self.dispatchGroup.leave()
             
