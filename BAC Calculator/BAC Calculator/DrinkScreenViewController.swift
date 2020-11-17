@@ -22,13 +22,17 @@ class DrinkScreenViewController: UIViewController {
     @IBOutlet weak var bacLevel: UILabel!
     var ounces : Double = 0
     var UserInforVC = UserInfoViewCotroller()
-    var genderCof : Double = 0.73
+    var genderCof : Double = 3.75
+    //var female = 4.7
     var userWeight : Double = 160
     var bac : Double = 0.0
     var count : Double = 0.0
+    var time : Double = 0.0
     @IBOutlet weak var doNotDrive: UILabel!
     @IBOutlet weak var skull: UIImageView!
     @IBOutlet weak var beerScroll: UIPickerView!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     //var dbRef:DatabaseReference!
     //let wineRef = Database.database().reference().child("Wine")
     //let seltzRef = Database.database().reference().child("Seltzer")
@@ -36,6 +40,7 @@ class DrinkScreenViewController: UIViewController {
     let ref = Database.database().reference()
     let dataRef = Database.database().reference()
     let dispatchGroup = DispatchGroup()
+    weak var timer : Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +49,8 @@ class DrinkScreenViewController: UIViewController {
         skull.isHidden = true
         beerScroll.isHidden = true
         doNotDrive.isHidden = true
+        startButton.isHidden = true
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
         
         print("MY NAME IS CHRISTOPHER LOUMEAU")
         
@@ -112,7 +119,7 @@ class DrinkScreenViewController: UIViewController {
     func calculateBAC(){
         //genderCof = UserInforVC.genderNumValue
         //userWeight = Double(UserInforVC.weight)!
-        bac = ((ounces)*(5.14))/((userWeight)*(genderCof))
+        bac = ((ounces)*(genderCof)-(0.16)*(time))/(userWeight)
         let roundedBac = String(format: "%.3f", bac)
         if(bac > 0.08){
             doNotDrive.isHidden = false
@@ -122,6 +129,12 @@ class DrinkScreenViewController: UIViewController {
             doNotDrive.isHidden = true
         }
         bacLevel.text = String(roundedBac)
+    }
+    
+    @objc func fireTimer() {
+        print("Trevor is super cool")
+        time = time + 0.016666
+        calculateBAC()
     }
     
     @IBAction func onTappedBeer(_ sender: Any) {
@@ -149,6 +162,20 @@ class DrinkScreenViewController: UIViewController {
         beerScroll.isHidden = true
         //count = count + 1
         //bacLevel.text = String(count)
+    }
+    
+    @IBAction func onTappedStartDrinking(_ sender: Any) {
+        startButton.isHidden = true
+        stopButton.isHidden = false
+        timer!.fire()
+    }
+    
+    @IBAction func onTappedStopDrinking(_ sender: Any) {
+        startButton.isHidden = false
+        stopButton.isHidden = true
+        timer!.invalidate()
+        ounces = 0
+        calculateBAC()
     }
     
     @IBAction func onTappedFriends(_ sender: Any) {

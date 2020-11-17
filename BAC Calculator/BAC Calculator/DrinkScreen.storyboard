@@ -116,11 +116,29 @@
                                     <action selector="onTappedProfile:" destination="muz-n4-kKw" eventType="touchUpInside" id="3wh-KU-KRJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpa-Pv-knT">
+                                <rect key="frame" x="151" y="74" width="121" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Drinking"/>
+                                <connections>
+                                    <action selector="onTappedStartDrinking:" destination="muz-n4-kKw" eventType="touchUpInside" id="jvb-sJ-Uff"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuF-85-dPa">
+                                <rect key="frame" x="151" y="74" width="121" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Stop Drinking"/>
+                                <connections>
+                                    <action selector="onTappedStopDrinking:" destination="muz-n4-kKw" eventType="touchUpInside" id="S6C-fK-GYf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Hd-2u-dp7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Hd-2u-dp7" firstAttribute="bottom" secondItem="qqw-Go-ypM" secondAttribute="bottom" id="0Q3-LD-GtM"/>
+                            <constraint firstItem="b2s-X6-AX2" firstAttribute="leading" secondItem="gpa-Pv-knT" secondAttribute="trailing" constant="56" id="0lz-cq-oTK"/>
+                            <constraint firstItem="PuF-85-dPa" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="30" id="2Lj-7x-7bL"/>
                             <constraint firstItem="n8Q-Qe-SUY" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="4q4-wG-jXo"/>
                             <constraint firstItem="hyf-ap-kxA" firstAttribute="leading" secondItem="6Hd-2u-dp7" secondAttribute="leading" constant="50" id="6DS-4V-JiS"/>
                             <constraint firstItem="n8Q-Qe-SUY" firstAttribute="top" secondItem="5a5-Os-ZQO" secondAttribute="bottom" constant="165" id="6Uk-17-dX5"/>
@@ -129,10 +147,12 @@
                             <constraint firstItem="n8Q-Qe-SUY" firstAttribute="top" secondItem="20Z-s1-kDK" secondAttribute="bottom" constant="3" id="AUe-zQ-Ecf"/>
                             <constraint firstItem="8pZ-zb-jhF" firstAttribute="top" secondItem="cjy-N0-zHe" secondAttribute="bottom" constant="5" id="CrP-mZ-XLw"/>
                             <constraint firstItem="6Hd-2u-dp7" firstAttribute="trailing" secondItem="Nlj-jo-dAq" secondAttribute="trailing" constant="80" id="DoS-RY-fSX"/>
+                            <constraint firstItem="gpa-Pv-knT" firstAttribute="leading" secondItem="Spy-ux-F7t" secondAttribute="trailing" constant="56" id="FBj-BZ-aeZ"/>
                             <constraint firstItem="qqw-Go-ypM" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="KAg-Gf-HCy"/>
                             <constraint firstItem="ZSy-q0-29x" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="LDg-uU-saZ"/>
                             <constraint firstItem="5a5-Os-ZQO" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="OEc-3h-34q"/>
                             <constraint firstItem="Nlj-jo-dAq" firstAttribute="top" secondItem="BjT-LB-4uH" secondAttribute="bottom" constant="5" id="P9D-xz-Duu"/>
+                            <constraint firstItem="gpa-Pv-knT" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="30" id="PRz-rl-z2A"/>
                             <constraint firstItem="xhh-bx-SsO" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="TfK-MX-2qG"/>
                             <constraint firstItem="20Z-s1-kDK" firstAttribute="top" secondItem="5a5-Os-ZQO" secondAttribute="bottom" constant="51" id="WdI-PW-lWp"/>
                             <constraint firstItem="Spy-ux-F7t" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="30" id="aMT-jI-e06"/>
@@ -141,10 +161,12 @@
                             <constraint firstItem="8pZ-zb-jhF" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="egE-zH-cgc"/>
                             <constraint firstItem="6Hd-2u-dp7" firstAttribute="trailing" secondItem="qqw-Go-ypM" secondAttribute="trailing" id="evf-1Y-Rcd"/>
                             <constraint firstItem="xhh-bx-SsO" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="80" id="f63-jp-pdw"/>
+                            <constraint firstItem="PuF-85-dPa" firstAttribute="leading" secondItem="Spy-ux-F7t" secondAttribute="trailing" constant="56" id="i4o-FQ-hJb"/>
                             <constraint firstItem="Spy-ux-F7t" firstAttribute="leading" secondItem="6Hd-2u-dp7" secondAttribute="leading" constant="30" id="kB0-JJ-YQz"/>
                             <constraint firstItem="20Z-s1-kDK" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="qcS-Xc-X4v"/>
                             <constraint firstItem="6Hd-2u-dp7" firstAttribute="bottom" secondItem="jD1-FA-NiT" secondAttribute="bottom" constant="80" id="snw-7R-gN4"/>
                             <constraint firstItem="n8Q-Qe-SUY" firstAttribute="top" secondItem="xhh-bx-SsO" secondAttribute="bottom" constant="105" id="svJ-Rm-OBC"/>
+                            <constraint firstItem="b2s-X6-AX2" firstAttribute="leading" secondItem="PuF-85-dPa" secondAttribute="trailing" constant="56" id="uSv-Wl-X7E"/>
                             <constraint firstItem="b2s-X6-AX2" firstAttribute="top" secondItem="6Hd-2u-dp7" secondAttribute="top" constant="30" id="uVv-C2-dL4"/>
                             <constraint firstItem="jD1-FA-NiT" firstAttribute="top" secondItem="hyf-ap-kxA" secondAttribute="bottom" constant="5" id="uzo-ug-yAD"/>
                             <constraint firstItem="cjy-N0-zHe" firstAttribute="centerX" secondItem="drO-Yl-VlG" secondAttribute="centerX" id="vjf-V1-QJT"/>
@@ -159,6 +181,8 @@
                         <outlet property="bacLevel" destination="5a5-Os-ZQO" id="lQJ-aI-hji"/>
                         <outlet property="beerScroll" destination="qqw-Go-ypM" id="Po2-Dy-7Np"/>
                         <outlet property="doNotDrive" destination="ZSy-q0-29x" id="Y2X-H4-V2D"/>
+                        <outlet property="startButton" destination="gpa-Pv-knT" id="74Q-mq-frh"/>
+                        <outlet property="stopButton" destination="PuF-85-dPa" id="Mdj-bt-dWX"/>
                         <segue destination="f8P-qQ-8jE" kind="show" identifier="showFriends" id="tUy-4R-ouk"/>
                         <segue destination="CJF-Nq-3YL" kind="show" identifier="showProfile" id="3S2-Rj-bYV"/>
                     </connections>
