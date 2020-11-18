@@ -15,13 +15,13 @@ class DrinkScreenViewController: UIViewController {
     
     var beerData = [String]()
     var newBeerData = [String]()
+    var wineData = [String]()
+    var newWineData = [String]()
+    var shotData = [String]()
+    var newShotData = [String]()
+    var array = ["error", "error", "error", "error", "error"]
     var profileVC = ProfileViewController()
     var wWeight : Int = 0
-    //var array = ["1", "2", "3", "4", "5"]
-    //var beerRef:DatabaseReference?
-    //var beerRef = Database.database().reference()
-    //var databaseHandle:DatabaseHandle?
-    //var beerList = [BeerModel]()
     @IBOutlet weak var bacLevel: UILabel!
     var ounces : Double = 0
     var UserInforVC = UserInfoViewCotroller()
@@ -31,15 +31,14 @@ class DrinkScreenViewController: UIViewController {
     var bac : Double = 0.0
     var count : Double = 0.0
     var time : Double = 0.0
+    var typeAlc : Int = 0
     @IBOutlet weak var doNotDrive: UILabel!
     @IBOutlet weak var skull: UIImageView!
     @IBOutlet weak var beerScroll: UIPickerView!
+    @IBOutlet weak var wineScroll: UIPickerView!
+    @IBOutlet weak var shotScroll: UIPickerView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
-    //var dbRef:DatabaseReference!
-    //let wineRef = Database.database().reference().child("Wine")
-    //let seltzRef = Database.database().reference().child("Seltzer")
-    //let liquorRef = Database.database().reference().child("Liquor")
     let ref = Database.database().reference()
     let dataRef = Database.database().reference()
     let dispatchGroup = DispatchGroup()
@@ -51,6 +50,8 @@ class DrinkScreenViewController: UIViewController {
         ounces = 0
         skull.isHidden = true
         beerScroll.isHidden = true
+        wineScroll.isHidden = true
+        shotScroll.isHidden = true
         doNotDrive.isHidden = true
         stopButton.isHidden = true
         wWeight = profileVC.numWeight
@@ -58,15 +59,14 @@ class DrinkScreenViewController: UIViewController {
         
         print("MY NAME IS CHRISTOPHER LOUMEAU")
         
-        for i in 1...27 {
+        //Beer Data
+        for i in 1...28 {
         self.dispatchGroup.enter()
         //let uid = 1
         ref.child("Beer").child(String(i)).child("Name").observeSingleEvent(of: .value,with: {(snapshot) in
 
-            //print(snapshot)
             let beer = snapshot.value
             self.beerData.append(beer as! String)
-            //print(self.beerData)
             self.dispatchGroup.leave()
 
         }, withCancel: nil)
@@ -75,50 +75,53 @@ class DrinkScreenViewController: UIViewController {
         self.dispatchGroup.notify(queue: DispatchQueue.main, execute: {
             self.newBeerData = self.beerData
             print(self.newBeerData)
-            print(self.newBeerData.count)
         })
+        
+        //Wine Data
+        for i in 1...8 {
+        self.dispatchGroup.enter()
+        ref.child("Wine").child(String(i)).child("Name").observeSingleEvent(of: .value,with: {(snapshot) in
+
+            let wine = snapshot.value
+            self.wineData.append(wine as! String)
+            self.dispatchGroup.leave()
+
+        }, withCancel: nil)
+        }
+
+        self.dispatchGroup.notify(queue: DispatchQueue.main, execute: {
+            self.newWineData = self.wineData
+            print(self.newWineData)
+        })
+        
+        //Shot Data
+        for i in 1...21 {
+        self.dispatchGroup.enter()
+        ref.child("Liquor").child(String(i)).child("Name").observeSingleEvent(of: .value,with: {(snapshot) in
+
+            let shot = snapshot.value
+            self.shotData.append(shot as! String)
+            self.dispatchGroup.leave()
+
+        }, withCancel: nil)
+        }
+
+        self.dispatchGroup.notify(queue: DispatchQueue.main, execute: {
+            self.newShotData = self.shotData
+            print(self.newShotData)
+        })
+        
         
         self.beerScroll.dataSource = self
         self.beerScroll.delegate = self
         self.beerScroll.reloadAllComponents()
+        self.wineScroll.dataSource = self
+        self.wineScroll.delegate = self
+        self.wineScroll.reloadAllComponents()
+        self.shotScroll.dataSource = self
+        self.shotScroll.delegate = self
+        self.shotScroll.reloadAllComponents()
     }
-    
-//    func funtion(){
-//        var rootRef: DatabaseReference!
-//        var refHandle: UInt!
-//        var haneRef: DatabaseReference!
-//        var numbersArray = [Int] ()
-//
-//        rootRef = Database.database().reference()
-//        haneRef = rootRef.child("Beer")
-//
-//        haneRef.queryOrdered(byChild: "lg_Et harcaması").queryLimited(toLast: 20).observe(.childAdded, with: { (snapshot) in
-//                    let hhtype = snapshot.value!["Beer"] as? Int
-//                    numbersArray.append(hhtype!)
-//                    print(numbersArray)
-//                })
-//    }
-    
-//    func displayBeer() -> [String]{
-//        ref.child("Beer").observeSingleEvent(of: .value) { (snapshot) in
-//            for child in snapshot.children {
-//                let snap = child as! DataSnapshot
-//                let key = snap.key
-//                self.dataRef.child("Beer").child(key).observeSingleEvent(of: .value) {(snapshot) in
-//                    for child in snapshot.children {
-//                        let nameSnap = child as! DataSnapshot
-//                        let nameKey = nameSnap.key
-//                        let nameValue = nameSnap.value!
-//                        if nameKey == "Name" {
-//                            self.beerData.append(nameValue as! String)
-//                        }
-//                        return self.beerData
-//                        print(nameKey, ": ", nameValue)
-//                    }
-//                    }
-//            }
-//        }
-//    }
     
     func calculateBAC(){
         //genderCof = UserInforVC.genderNumValue
@@ -142,33 +145,27 @@ class DrinkScreenViewController: UIViewController {
     }
     
     @IBAction func onTappedBeer(_ sender: Any) {
-        //print("beer")
-        ounces = ounces + ((12)*(0.05))
-        calculateBAC()
+        typeAlc = 1
         beerScroll.reloadAllComponents()
         beerScroll.isHidden = false
-        //count = count + 1
-        //bacLevel.text = String(count)
+        wineScroll.isHidden = true
+        shotScroll.isHidden = true
     }
 
     @IBAction func onTappedWine(_ sender: Any) {
-        //print("wine")
-        ounces = ounces + ((5)*(0.12))
-        calculateBAC()
-        beerScroll.reloadAllComponents()
+        typeAlc = 2
+        wineScroll.reloadAllComponents()
         beerScroll.isHidden = true
-        //count = count + 1
-        //bacLevel.text = String(count)
+        wineScroll.isHidden = false
+        shotScroll.isHidden = true
     }
     
     @IBAction func onTappedShot(_ sender: Any) {
-        //print("shot")
-        ounces = ounces + ((1)*(0.40))
-        calculateBAC()
-        beerScroll.reloadAllComponents()
+        typeAlc = 3
+        shotScroll.reloadAllComponents()
         beerScroll.isHidden = true
-        //count = count + 1
-        //bacLevel.text = String(count)
+        wineScroll.isHidden = true
+        shotScroll.isHidden = false
     }
     
     @IBAction func onTappedStartDrinking(_ sender: Any) {
@@ -202,7 +199,16 @@ extension DrinkScreenViewController: UIPickerViewDelegate, UIPickerViewDataSourc
    }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return newBeerData.count
+        switch typeAlc {
+        case 1:
+            return newBeerData.count
+        case 2:
+            return newWineData.count
+        case 3:
+            return newShotData.count
+        default:
+            return array.count
+        }
     }
     
     //func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -210,12 +216,43 @@ extension DrinkScreenViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     //}
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return newBeerData[row]
+        switch typeAlc {
+        case 1:
+            return newBeerData[row]
+        case 2:
+            return newWineData[row]
+        case 3:
+            return newShotData[row]
+        default:
+            return array[row]
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("\(newBeerData[row])")
-        beerScroll.isHidden = true
+        switch typeAlc {
+        case 1:
+            print("\(newBeerData[row])")
+            beerScroll.isHidden = true
+            ounces = ounces + ((12)*(0.05))
+            calculateBAC()
+        case 2:
+            print("\(newWineData[row])")
+            wineScroll.isHidden = true
+            ounces = ounces + ((5)*(0.12))
+            calculateBAC()
+        case 3:
+            print("\(newShotData[row])")
+            shotScroll.isHidden = true
+            ounces = ounces + ((1)*(0.40))
+            calculateBAC()
+        default:
+            print("\(array[row])")
+            beerScroll.isHidden = true
+            wineScroll.isHidden = true
+            shotScroll.isHidden = true
+            calculateBAC()
+        }
+            
     }
 }
 class BeerModel {
