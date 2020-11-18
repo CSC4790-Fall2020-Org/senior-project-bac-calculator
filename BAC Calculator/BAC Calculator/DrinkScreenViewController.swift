@@ -15,6 +15,9 @@ class DrinkScreenViewController: UIViewController {
     
     var beerData = [String]()
     var newBeerData = [String]()
+    var profileVC = ProfileViewController()
+    var wWeight : Int = 0
+    //var array = ["1", "2", "3", "4", "5"]
     //var beerRef:DatabaseReference?
     //var beerRef = Database.database().reference()
     //var databaseHandle:DatabaseHandle?
@@ -49,27 +52,28 @@ class DrinkScreenViewController: UIViewController {
         skull.isHidden = true
         beerScroll.isHidden = true
         doNotDrive.isHidden = true
-        startButton.isHidden = true
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+        stopButton.isHidden = true
+        wWeight = profileVC.numWeight
+        print(wWeight)
         
         print("MY NAME IS CHRISTOPHER LOUMEAU")
         
+        for i in 1...27 {
         self.dispatchGroup.enter()
-        //for i in 1...28 {
-        let uid = 1
-        ref.child("Beer").child(String(uid)).child("Name").observeSingleEvent(of: .value,with: {(snapshot) in
-            
+        //let uid = 1
+        ref.child("Beer").child(String(i)).child("Name").observeSingleEvent(of: .value,with: {(snapshot) in
+
             //print(snapshot)
             let beer = snapshot.value
-            self.beerData.insert(beer as! String, at: uid-1)
+            self.beerData.append(beer as! String)
             //print(self.beerData)
             self.dispatchGroup.leave()
-            
+
         }, withCancel: nil)
-        //}
-        
+        }
+
         self.dispatchGroup.notify(queue: DispatchQueue.main, execute: {
-            self.newBeerData.append(self.beerData[0])
+            self.newBeerData = self.beerData
             print(self.newBeerData)
             print(self.newBeerData.count)
         })
@@ -132,7 +136,7 @@ class DrinkScreenViewController: UIViewController {
     }
     
     @objc func fireTimer() {
-        print("Trevor is super cool")
+        print(time)
         time = time + 0.016666
         calculateBAC()
     }
@@ -141,6 +145,7 @@ class DrinkScreenViewController: UIViewController {
         //print("beer")
         ounces = ounces + ((12)*(0.05))
         calculateBAC()
+        beerScroll.reloadAllComponents()
         beerScroll.isHidden = false
         //count = count + 1
         //bacLevel.text = String(count)
@@ -150,6 +155,7 @@ class DrinkScreenViewController: UIViewController {
         //print("wine")
         ounces = ounces + ((5)*(0.12))
         calculateBAC()
+        beerScroll.reloadAllComponents()
         beerScroll.isHidden = true
         //count = count + 1
         //bacLevel.text = String(count)
@@ -159,6 +165,7 @@ class DrinkScreenViewController: UIViewController {
         //print("shot")
         ounces = ounces + ((1)*(0.40))
         calculateBAC()
+        beerScroll.reloadAllComponents()
         beerScroll.isHidden = true
         //count = count + 1
         //bacLevel.text = String(count)
@@ -167,7 +174,7 @@ class DrinkScreenViewController: UIViewController {
     @IBAction func onTappedStartDrinking(_ sender: Any) {
         startButton.isHidden = true
         stopButton.isHidden = false
-        timer!.fire()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
     }
     
     @IBAction func onTappedStopDrinking(_ sender: Any) {
@@ -175,6 +182,7 @@ class DrinkScreenViewController: UIViewController {
         stopButton.isHidden = true
         timer!.invalidate()
         ounces = 0
+        time = 0
         calculateBAC()
     }
     

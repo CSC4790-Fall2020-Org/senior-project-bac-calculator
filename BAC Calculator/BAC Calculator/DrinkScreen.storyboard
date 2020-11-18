@@ -191,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="18.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="lhh-kk-FoH">
             <objects>
-                <viewController id="CJF-Nq-3YL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile View Controller" id="CJF-Nq-3YL" customClass="ProfileViewController" customModule="BAC_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tA6-SX-nfh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,21 +212,30 @@
                                     <constraint firstAttribute="height" constant="150" id="ua3-ZG-ng0"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClJ-Ba-ej4">
-                                <rect key="frame" x="162" y="352" width="90.5" height="24"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Opa-TM-Afm">
+                                <rect key="frame" x="207" y="404" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="wkK-Oy-ejs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="getValWeight:" destination="CJF-Nq-3YL" eventType="editingDidEnd" id="tfi-gm-ABD"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="q4l-ld-i0a">
+                                <rect key="frame" x="57" y="453" width="300" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="wFo-T2-FQm"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQD-6O-waa">
+                                <rect key="frame" x="57" y="414" width="113" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Day drinking: mm/dd/yyyy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exq-iY-XqR">
-                                <rect key="frame" x="21.5" y="391" width="371.5" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Time Drinks: ##" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUO-Qe-s9Q">
-                                <rect key="frame" x="87" y="439.5" width="240" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -236,17 +245,22 @@
                         <constraints>
                             <constraint firstItem="umi-iQ-MaY" firstAttribute="top" secondItem="oYt-3m-BAR" secondAttribute="bottom" constant="25" id="4Tb-Bh-cDU"/>
                             <constraint firstItem="oYt-3m-BAR" firstAttribute="centerX" secondItem="tA6-SX-nfh" secondAttribute="centerX" id="EeI-uy-USB"/>
-                            <constraint firstItem="ClJ-Ba-ej4" firstAttribute="centerX" secondItem="tA6-SX-nfh" secondAttribute="centerX" id="GiS-Oy-wLU"/>
-                            <constraint firstItem="fUO-Qe-s9Q" firstAttribute="centerX" secondItem="tA6-SX-nfh" secondAttribute="centerX" id="JrO-rI-jly"/>
                             <constraint firstItem="umi-iQ-MaY" firstAttribute="centerX" secondItem="tA6-SX-nfh" secondAttribute="centerX" id="Jwg-NT-cG6"/>
-                            <constraint firstItem="ClJ-Ba-ej4" firstAttribute="top" secondItem="umi-iQ-MaY" secondAttribute="bottom" constant="10" id="Mxu-Hf-1hm"/>
-                            <constraint firstItem="fUO-Qe-s9Q" firstAttribute="top" secondItem="exq-iY-XqR" secondAttribute="bottom" constant="15" id="YnG-7m-w0z"/>
-                            <constraint firstItem="exq-iY-XqR" firstAttribute="top" secondItem="ClJ-Ba-ej4" secondAttribute="bottom" constant="15" id="lhI-mR-Iug"/>
+                            <constraint firstItem="Opa-TM-Afm" firstAttribute="centerY" secondItem="tA6-SX-nfh" secondAttribute="centerY" id="OQu-jY-wdg"/>
+                            <constraint firstItem="q4l-ld-i0a" firstAttribute="top" secondItem="LQD-6O-waa" secondAttribute="bottom" constant="15" id="Q6d-95-uwC"/>
+                            <constraint firstItem="ROQ-O1-HlF" firstAttribute="trailing" secondItem="Opa-TM-Afm" secondAttribute="trailing" constant="57" id="aEn-5C-uKe"/>
+                            <constraint firstItem="q4l-ld-i0a" firstAttribute="top" secondItem="Opa-TM-Afm" secondAttribute="bottom" constant="15" id="irA-am-n1D"/>
+                            <constraint firstItem="LQD-6O-waa" firstAttribute="leading" secondItem="ROQ-O1-HlF" secondAttribute="leading" constant="57" id="nJW-Xp-xcQ"/>
                             <constraint firstItem="oYt-3m-BAR" firstAttribute="top" secondItem="ROQ-O1-HlF" secondAttribute="top" constant="125" id="nrr-cX-GQf"/>
-                            <constraint firstItem="exq-iY-XqR" firstAttribute="centerX" secondItem="tA6-SX-nfh" secondAttribute="centerX" id="tu9-er-FME"/>
+                            <constraint firstItem="q4l-ld-i0a" firstAttribute="centerX" secondItem="tA6-SX-nfh" secondAttribute="centerX" id="pDw-dC-sex"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZWk-3A-pZk"/>
+                    <connections>
+                        <outlet property="gender" destination="q4l-ld-i0a" id="AZJ-wI-vCS"/>
+                        <outlet property="userName" destination="umi-iQ-MaY" id="QuI-Wj-s21"/>
+                        <outlet property="weight" destination="Opa-TM-Afm" id="q9A-ml-jSq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JhB-Ut-kJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

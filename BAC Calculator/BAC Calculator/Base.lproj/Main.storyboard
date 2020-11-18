@@ -236,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZa-ch-rpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915.94202898550736" y="117.85714285714285"/>
+            <point key="canvasLocation" x="1013" y="665"/>
         </scene>
         <!--drinksPage-->
         <scene sceneID="ZU9-lk-hUh">
@@ -246,7 +246,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kts-r9-jgs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="224"/>
+            <point key="canvasLocation" x="1623" y="234"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
