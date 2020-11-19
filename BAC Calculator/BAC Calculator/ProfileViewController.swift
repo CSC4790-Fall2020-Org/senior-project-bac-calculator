@@ -17,18 +17,22 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var weight: UITextField!
     @IBOutlet weak var gender: UISegmentedControl!
     var userWeight: String = ""
-    var numWeight: Int = 0
+    var DrinksVC = DrinkScreenViewController()
+    let dispatchGroup = DispatchGroup()
+    let currentUserName : String = (Auth.auth().currentUser?.displayName)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         weight.text = userWeight
+        userName.text = currentUserName
     }
     
     @IBAction func getValWeight(_ sender: Any){
         userWeight = weight.text!
+        self.dispatchGroup.enter()
         if userWeight != "" {
-            numWeight = Int(userWeight)!
+            DrinksVC.numWeight = Int(userWeight)!
         }
-        print(numWeight)
+        //print("Profile VC: ", DrinksVC.numWeight)
     }
 }

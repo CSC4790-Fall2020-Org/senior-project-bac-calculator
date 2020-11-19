@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import FirebaseAuth
+import FirebaseUI
 
 class DrinkScreenViewController: UIViewController {
     
@@ -20,11 +21,11 @@ class DrinkScreenViewController: UIViewController {
     var shotData = [String]()
     var newShotData = [String]()
     var array = ["error", "error", "error", "error", "error"]
-    var profileVC = ProfileViewController()
+    //var profileVC = ProfileViewController()
     var wWeight : Int = 0
     @IBOutlet weak var bacLevel: UILabel!
     var ounces : Double = 0
-    var UserInforVC = UserInfoViewCotroller()
+    //var UserInforVC = UserInfoViewCotroller()
     var genderCof : Double = 3.75
     //var female = 4.7
     var userWeight : Double = 160
@@ -43,6 +44,7 @@ class DrinkScreenViewController: UIViewController {
     let dataRef = Database.database().reference()
     let dispatchGroup = DispatchGroup()
     weak var timer : Timer?
+    public var numWeight: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,8 +56,8 @@ class DrinkScreenViewController: UIViewController {
         shotScroll.isHidden = true
         doNotDrive.isHidden = true
         stopButton.isHidden = true
-        wWeight = profileVC.numWeight
-        print(wWeight)
+        //wWeight = profileVC.numWeight
+        //print(wWeight)
         
         print("MY NAME IS CHRISTOPHER LOUMEAU")
         
@@ -124,8 +126,12 @@ class DrinkScreenViewController: UIViewController {
     }
     
     func calculateBAC(){
-        //genderCof = UserInforVC.genderNumValue
-        //userWeight = Double(UserInforVC.weight)!
+        //genderCof = profileVC.genderNumValue
+        //print("Drink VC ", numWeight)
+        if(numWeight != 0){
+            userWeight = Double(numWeight)
+            print("users new weight ", userWeight)
+        }
         bac = ((ounces)*(genderCof)-(0.16)*(time))/(userWeight)
         let roundedBac = String(format: "%.3f", bac)
         if(bac > 0.08){
