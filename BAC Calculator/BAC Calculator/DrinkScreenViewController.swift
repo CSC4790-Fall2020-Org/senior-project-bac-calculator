@@ -59,7 +59,7 @@ class DrinkScreenViewController: UIViewController {
         //wWeight = profileVC.numWeight
         //print(wWeight)
         
-        print("MY NAME IS CHRISTOPHER LOUMEAU")
+        //print("MY NAME IS CHRISTOPHER LOUMEAU")
         
         //Beer Data
         for i in 1...28 {
