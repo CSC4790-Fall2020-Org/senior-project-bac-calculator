@@ -1,6 +1,21 @@
 # project-4700-s20-bac-app
 project-4700-s20-bac-app created by GitHub Classroom
+BAC Calculator Native IOS application. Uses Swift for the applications interface, and NoSQL for the database that is connected to firebase. The app consists of an interface with a selection of specific alcohol drinks to calculate the BAC. We also plan to implement a friends feature to showcase other BAC’s and where they are similar to the 'snapmap' interface. 
 
-Our project is a BAC Calculator Native IOS application. We will use swift to write the backend calculation code for the application, Xcode for the applications interface, and SQL for the database. The project will consist of an interface with a selection of specific alcohol drinks to calculate the BAC. It will also have a friends feature to showcase other BAC’s and where they are similar to the snap map interface. 
+Project files are located in the "BAC Calculator" folder.
 
-Project files are located in the "BAC Calculator" folder 
+PREREQUSITES:
+1. Must be using a MAC
+2. Must have CocoaPods downloaded https://cocoapods.org/
+3. Have XCode API 
+4. Must be connected to the interet for the database to be connected 
+
+
+Instructions to Run:
+1. Clone/download the final-release
+2. Open the project within XCode (Make sure it is an up to date version)
+3. Run the project with the 'IPhone 11 Max' emulator chosen
+
+
+Contributers:
+Stephen Wickwire, Trevor Yandow, Clare Morris, Chris Loumaeu 
