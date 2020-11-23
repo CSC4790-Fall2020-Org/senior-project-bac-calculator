@@ -8,7 +8,7 @@ PREREQUSITES:
 1. Must be using a MAC
 2. Must have CocoaPods downloaded https://cocoapods.org/
 3. Have XCode API 
-4. Must be connected to the interet for the database to be connected 
+4. Must be connected to the internet for the database to be connected 
 
 
 Instructions to Run:
